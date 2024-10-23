@@ -1,3 +1,5 @@
+print("Please provide your")
+
 Profile = {}
 
 #Loop1: Asks the user to input their information
@@ -16,6 +18,9 @@ while True:
 
             print(Profile["name"])
             print(Profile["age"])
+
+            #Store each profile input in a dictionary
+            Profile[name] = age
             
             retry = input("Do you want to make any changes? ")
             #Stops Loop2
