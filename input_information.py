@@ -2,23 +2,33 @@ Profile = {}
 
 #Loop1: Asks the user to input their information
 while True:
-    try:
-        name = print(input("Name: "))
-        age = print(int(input("Age: ")))
+    
+    #Loop2: Allows the user to auto-retry if input is invalid
+    while True:
+        try:
+            name = input("Name: ")
+            age = int(input("Age: "))
 
-        Profile = {
-            "name" : name,
-            "age" : age
-        }
+            Profile = {
+                "name" : name,
+                "age" : age
+            }
 
+            print(Profile["name"])
+            print(Profile["age"])
+            
+            retry = input("Do you want to make any changes? ")
+            #Stops Loop2
+            break
+        except:
+            print("Please input valid name or age.")
+    
+    if retry == "Yes":
+        print("Please provide your information.")
+    
+    #Stops Loop1
+    elif retry == "No":
         print(Profile["name"])
         print(Profile["age"])
-        
-        #Stops Loop1
         break
-    except:
-        print("Please input valid name or age.")
-
-#Loop2: Allows the user to auto-retry if input is invalid
-
-#Stops Loop2
+    
