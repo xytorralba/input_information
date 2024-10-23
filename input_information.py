@@ -1,6 +1,6 @@
-print("Please provide your")
+print("Please provide your information")
 
-Profile = {}
+profile = {}
 
 #Loop1: Asks the user to input their information
 while True:
@@ -11,18 +11,13 @@ while True:
             name = input("Name: ")
             age = int(input("Age: "))
 
-            Profile = {
-                "name" : name,
-                "age" : age
-            }
-
-            print(Profile["name"])
-            print(Profile["age"])
-
             #Store each profile input in a dictionary
-            Profile[name] = age
+            profile[name] = age
             
-            retry = input("Do you want to make any changes? ")
+            print(f"{name}")
+            print(f"{age}")
+
+            retry = input("Do you want to make any changes? (Yes/No) ")
             #Stops Loop2
             break
         except:
@@ -33,7 +28,7 @@ while True:
     
     #Stops Loop1
     elif retry == "No":
-        print(Profile["name"])
-        print(Profile["age"])
+        print(f"{name}")
+        print(f"{age}")
         break
     
