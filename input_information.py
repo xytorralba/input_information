@@ -1,4 +1,4 @@
-print("Please provide your information")
+print("Please provide necessary information")
 
 profile = {}
 
@@ -18,8 +18,10 @@ while True:
             print(f"{age}")
 
             retry = input("Do you want to make any changes? (Yes/No) ")
+            
             #Stops Loop2
             break
+        
         except:
             print("Please input valid name or age.")
     
@@ -28,7 +30,6 @@ while True:
     
     #Stops Loop1
     elif retry == "No":
-        print(f"{name}")
-        print(f"{age}")
+        print(f"The oldest is {name} with age {age}.")
         break
     
