@@ -30,6 +30,7 @@ while True:
     
     #Stops Loop1
     elif retry == "No":
-        print(f"The oldest is {name} with age {age}.")
+        oldest = max(profile, key = profile.get)
+        print(f"The oldest is {oldest} with age {profile[oldest]}.")
         break
     
